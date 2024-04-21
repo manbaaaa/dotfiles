@@ -75,6 +75,7 @@ ln -sf $CURRENT_DIR/bash/bashrc $HOME/.bashrc
 ln -sf $CURRENT_DIR/bash/bashrc $HOME/.bash_profile
 ln -sf $CURRENT_DIR/bash/bashrc $HOME/.profile
 ln -sf $CURRENT_DIR/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $CURRENT_DIR/tmux/mylayout $HOME/.mylayout 
 ln -sf $CURRENT_DIR/git/gitconfig $HOME/.gitconfig
 ln -sf $CURRENT_DIR/./zsh/avit.zsh-theme $HOME/.oh-my-zsh/themes/avit.zsh-theme
 if [ ! -e "$HOME/.vim/UltiSnips" ]; then

@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit" #"agnoster"
+ZSH_THEME="cloud" #"agnoster"
 
 # Ignore insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX="true"
@@ -170,65 +170,21 @@ function mkcd () {
 #   export CUDA_PATH=$CUDA_HOME
 # fi
 
-if [[ $(hostname -f) == LAPTOP-* ]]; then
-  alias python='python3'
-  # Install Ruby Gems to ~/gems
-  export GEM_HOME="$HOME/gems"
-  export PATH="$HOME/gems/bin:$PATH"
-  export PATH="$PATH:$HOME/bin"
-
+if [[ $(hostname -f) == *-PC* || $(hostname -f) == songxingchen*.hobot.cc || $(whoami) == lishaojie ]]; then
+#   export PATH=$PATH:$HOME/tools/go/bin
+#   source ~/proxy.sh
+  # https://github.com/conda/conda/issues/9392#issuecomment-617345019
+  unset CONDA_SHLVL
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$('/home/xcsong/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  __conda_setup="$('/Users/lishaojie/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
   if [ $? -eq 0 ]; then
       eval "$__conda_setup"
   else
       if [ -f "/home/xcsong/tools/miniconda3/etc/profile.d/conda.sh" ]; then
           . "/home/xcsong/tools/miniconda3/etc/profile.d/conda.sh"
       else
-          export PATH="/home/xcsong/tools/miniconda3/bin:$PATH"
-      fi
-  fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-fi
-
-if [[ $(hostname -f) == *-PC* || $(hostname -f) == songxingchen*.hobot.cc || $(whoami) == xcsong ]]; then
-  export PATH=$PATH:$HOME/tools/go/bin
-  source ~/proxy.sh
-  # https://github.com/conda/conda/issues/9392#issuecomment-617345019
-  unset CONDA_SHLVL
-  # >>> conda initialize >>>
-  # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$('/home/xcsong/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-      eval "$__conda_setup"
-  else
-      if [ -f "/home/xcsong/tools/miniconda3/etc/profile.d/conda.sh" ]; then
-          . "/home/xcsong/tools/miniconda3/etc/profile.d/conda.sh"
-      else
-          export PATH="/home/xcsong/tools/miniconda3/bin:$PATH"
-      fi
-  fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-fi
-
-if [[ $(hostname -f) == *.hogpu.cc ]]; then
-  export PATH=$PATH:$HOME/tools/go/bin:/bucket/output/jfs-hdfs/user/xingchen.song/tools/arcanist/bin/
-  source ~/proxy.sh
-  # https://github.com/conda/conda/issues/9392#issuecomment-617345019
-  unset CONDA_SHLVL
-  # >>> conda initialize >>>
-  # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$('/bucket/output/jfs-hdfs/user/xingchen.song/tools/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-      eval "$__conda_setup"
-  else
-      if [ -f "/bucket/output/jfs-hdfs/user/xingchen.song/tools/miniconda3/etc/profile.d/conda.sh" ]; then
-          . "/bucket/output/jfs-hdfs/user/xingchen.song/tools/miniconda3/etc/profile.d/conda.sh"
-      else
-          export PATH="/bucket/output/jfs-hdfs/user/xingchen.song/tools/miniconda3/bin:$PATH"
+          export PATH="/Users/lishaojie/tools/miniconda3/bin:$PATH"
       fi
   fi
   unset __conda_setup
