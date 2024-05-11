@@ -15,7 +15,6 @@ Plug 'https://github.com/preservim/nerdtree' |
 " Plug 'https://github.com/ryanoasis/vim-devicons'
 " Plug 'https://github.com/ryanoasis/nerd-fonts.git' cd zsh && ./install.sh
 Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'https://github.com/scrooloose/nerdtree-project-plugin'
 Plug 'https://github.com/PhilRunninger/nerdtree-visual-selection'
 " fuzzy file finder
 Plug 'https://github.com/junegunn/fzf'
