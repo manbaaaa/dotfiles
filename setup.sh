@@ -66,7 +66,7 @@ else
 fi
 
 # 3. python3-pip clang ctags
-# see scripts/install_pkg.sh
+see scripts/install_pkg.sh
 
 # 4. set paths
 ln -sf $CURRENT_DIR/vim/vimrc $HOME/.vimrc

@@ -1,5 +1,5 @@
 selectp -t 0    #选中第0个窗格
-splitw -h -l 50 #将其分成左右两个
+splitw -h  #将其分成左右两个
 selectp -t 1     #选中第一个，也就是右边那个
-splitw -v -l 50  #将其分成上下两个，这样就变成了图中的布局了
+splitw -v #将其分成上下两个，这样就变成了图中的布局了
 selectp -t 0     #选回第一个

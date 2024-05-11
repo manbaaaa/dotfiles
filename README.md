@@ -5,3 +5,6 @@ my settings for dotfiles(vim zsh .etc)
 ```console
 ./setup.sh
 ```
+
+
+vim plugin install: :PluginInstall
